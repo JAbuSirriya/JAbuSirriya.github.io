@@ -1,10 +1,17 @@
 
 
-.letterOnBoard {
+.divAroundLetter {
   height: 50px;
   width: 50px;
-  background-color: lightblue;
-  border-style: solid;
+  
+}
+
+.letter {
+    height: 50px;
+    width: 50px;
+    background-color: lightblue;
+    font-size: 30px;
+    text-align: center;
 }
 
 #guessLetters {
