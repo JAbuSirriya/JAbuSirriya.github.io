@@ -1,0 +1,12 @@
+
+
+.letterOnBoard {
+  height: 50px;
+  width: 50px;
+  background-color: lightblue;
+  border-style: solid;
+}
+
+#guessLetters {
+    display: flex;
+}
