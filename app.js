@@ -46,10 +46,11 @@ $(document).ready(function() {
             let winningFunction = () => {
                 if (correctGuesses.length == randomWord.length) {
                 console.log('You win!')
+                resetGame()
                 }
-                winningFunction()
+        
             } //end of winning function
-
+            winningFunction()
         } //end of if statement
 
             //losing function
@@ -57,31 +58,30 @@ $(document).ready(function() {
                 if (numOfGuesses === 7 && correctGuesses.length != randomWord.length) {
                     $('.button').prop('disabled', true);
                     console.log('You lose!')
+                    resetGame()
                 }
                 
             } //end of losing function
             losingFunction()
 
-
-            //rest game function 
-            // const resetGame = () => {
-            //     numOfGuesses = []
-            //     checkCorrectLetter()
-
-            //     }
-
-            // resetGame()
-
-
         } //end of for loop
 
-        
     } 
     )
      //end of button listener
 } //end of correct letter function
 
     
+    // rest game function 
+    const resetGame = () => {
+        numOfGuesses = [];
+        }
+    
+    //reset button which makes butt
+    $('.reset').on('click', () => {
+        $('.button').prop('disabled', false);
+    })
+
 
 
     checkCorrectLetter()
