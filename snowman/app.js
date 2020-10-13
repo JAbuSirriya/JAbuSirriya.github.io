@@ -2,8 +2,6 @@
 
 $(document).ready(function() {
 
-    
- 
 //################################################################## Start Game Function  
     
 const startGame = () => {
@@ -87,9 +85,9 @@ generateWord()
         //sends correct letters to correctGuesses array
         correctGuesses.push($correctLetter)
         } else if (currentGuess != randomWord[i]) {
-            const num =+ 1
-            incorrectGuesses.push(num)
-            break
+            // $incorrectLetter = ($('.letter').eq(i)) ///this is looping the number of letters in the word
+            // incorrectGuesses.push($incorrectLetter)
+            // console.log(incorrectGuesses)
         }
 
         }
