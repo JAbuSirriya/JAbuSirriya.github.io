@@ -6,9 +6,17 @@ $(document).ready(function() {
     
 const startGame = () => {
 
+    // Format your code
+    // Start with all global variables
+    // Hook up my event handlers that don't rely on other functions
+    // Lower level (helper) functions
+    // Higher level functions
+    // Note: You have to hook up event handlers after the function is declared
+
 //################################################################### Winning function 
 // match the correct guess length with the random word 
     const winningFunction = () => {
+        console.log('winningFunction');
         if (correctGuesses.length == randomWord.length) {
         console.log('You win!')
         }
@@ -30,37 +38,30 @@ const startGame = () => {
 
 
     //select one random word from the list
-    let randomWord = listOfWords[Math.floor(Math.random()*listOfWords.length)]
-    let randomWordSplit = randomWord.split("");
-
-
-
-    //######################################################### Reset Game function 
-    // const resetGame = () => {
-    // numOfGuesses = [];
-    // $('.button').prop('disabled', false);
-    // generateWord()
-    // checkCorrectLetter()
-
-    // }
-
-    // // // reset game button
-    // $('#reset').on('click', resetGame())
+    let randomWord;
+ 
 
 
 
     //###################################### Generate Word Function
  const generateWord = () => {
+    let randWord = listOfWords[Math.floor(Math.random()*listOfWords.length)];
+    console.log(randWord);
+    let randomWordSplit = randWord.split("");
+
     //creates a div surrounding the letter and a letter div
-    for (i = 0; i<randomWord.length; i++) {
+    $('#guessLetters').empty()
+    for (i = 0; i<randWord.length; i++) {
         $divAroundLetter = $('<div>').addClass('DivAroundLetter').css('border-style', 'solid');
         $('#guessLetters').append($divAroundLetter);
         $letter = $('<div>').addClass('letter').text(randomWordSplit[i]).css('color', 'lightblue');
         $divAroundLetter.append($letter);
     }
 
+    return randWord;
+
 } //end of generateWord function
-generateWord()
+//generateWord()
 
 
 //############################################################################ More Global variables
@@ -70,39 +71,45 @@ generateWord()
     
 
 
-//#################################################################### check correct letter function
-    const checkCorrectLetter = () => {
+//#################################################################### check correct letter handler 
     $('.button').on('click', (event) => {
+        console.log('clicked');
         let currentGuess = $(event.target).text().toLowerCase()
         $(event.target).prop('disabled', true);
 
-    
-
     //correct letters will show up in black 
+        let foundLetter = false
         for (let i=0; i<randomWord.length; i++) {
-        if (currentGuess == randomWord[i]) {
-        $correctLetter = ($('.letter').eq(i).css('color', 'black').addClass('revealed'))
-        //sends correct letters to correctGuesses array
-        correctGuesses.push($correctLetter)
-        } else if (currentGuess != randomWord[i]) {
-            // $incorrectLetter = ($('.letter').eq(i)) ///this is looping the number of letters in the word
-            // incorrectGuesses.push($incorrectLetter)
-            // console.log(incorrectGuesses)
+            if (currentGuess == randomWord[i]) {
+                foundLetter = true
+                $correctLetter = ($('.letter').eq(i).css('color', 'black').addClass('revealed'))
+                //sends correct letters to correctGuesses array
+                correctGuesses.push($correctLetter)
+            } 
+        }
+        if (foundLetter === false) {
+            incorrectGuesses.push(currentGuess)
+            console.log(incorrectGuesses)
         }
 
-        }
-        
         winningFunction()
         losingFunction()
-    } 
-    )
+    })
 
 
+    //######################################################### Reset Game function 
+    const resetGame = () => {
+        console.log('resetGame');
+        correctGuesses = []
+        incorrectGuesses = []
+        $('.button').prop('disabled', false);
+        randomWord = generateWord()
 
- } //end of checkCorrectLetter
-checkCorrectLetter()
+    }
 
-
+    // // reset game button
+    $('#reset').on('click', resetGame)
+    resetGame();
 
 
 } // end of main game function
