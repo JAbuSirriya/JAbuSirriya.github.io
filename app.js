@@ -26,6 +26,8 @@ $(document).ready(function() {
  
     //main game function
     const checkCorrectLetter = () => {
+    //array of corret guesses
+    correctGuesses = []
     //player guess
     let numOfGuesses = 0
     $('button').on('click', (event) => {
@@ -33,21 +35,34 @@ $(document).ready(function() {
         $(event.target).prop('disabled', true);
         numOfGuesses++
 
+    //correct letters will show up in black 
         for (let i=0; i<randomWord.length; i++) {
             if (currentGuess == randomWord[i]) {
-                $('.letter').eq(i).css('color', 'black').addClass('revealed')
-                    //winning function
-                    if ($('.letter').every('revealed')) {
-                        alert('You win!')
-                    }
-                    
+            $correctLetter = ($('.letter').eq(i).css('color', 'black').addClass('revealed')) 
+            //sends correct letters to correctGuesses array
+            correctGuesses.push($correctLetter)
+
+            // SOURCE: https://github.com/simonjsuh/Vanilla-Javascript-Hangman-Game/blob/master/js/hangman.js
+            // winning function, match the correct guess length with the random word 
+            if (correctGuesses.length == randomWord.length) {
+                console.log('You win!')
+            } if (numOfGuesses == 7) {
+                console.log('hi')
+                $('.button').prop('disabled', true);
             }
-        }
+
+        
+            }  //end of if statement
+
+
+        
+        } //end of for loop
+
+        
         
 
-        }
         
-    ) //end of button listener
+    }) //end of button listener
 } //end of correct letter function
 
     
