@@ -19,43 +19,54 @@ $(document).ready(function() {
         $('#guessLetters').append($divAroundLetter);
         $letter = $('<div>').addClass('letter').text(randomWordSplit[i]).css('color', 'lightblue');
         $divAroundLetter.append($letter);
-    
     }
 
-  
  
     //main game function
-    const checkCorrectLetter = () => {
-    //array of corret guesses
+    //array of correct guesses
     correctGuesses = []
     //player guess
-    let numOfGuesses = 0
+    const numOfGuesses = 0
+    let checkCorrectLetter = () => {
     $('button').on('click', (event) => {
         let currentGuess = $(event.target).text().toLowerCase()
         $(event.target).prop('disabled', true);
         numOfGuesses++
+    
 
     //correct letters will show up in black 
         for (let i=0; i<randomWord.length; i++) {
             if (currentGuess == randomWord[i]) {
             $correctLetter = ($('.letter').eq(i).css('color', 'black').addClass('revealed')) 
+
             //sends correct letters to correctGuesses array
             correctGuesses.push($correctLetter)
 
+
             // SOURCE: https://github.com/simonjsuh/Vanilla-Javascript-Hangman-Game/blob/master/js/hangman.js
             // winning function, match the correct guess length with the random word 
-            if (correctGuesses.length == randomWord.length) {
+            const winningFunction = () => {
+                if (correctGuesses.length == randomWord.length) {
                 console.log('You win!')
-            } if (numOfGuesses == 7) {
-                console.log('hi')
-                $('.button').prop('disabled', true);
-            }
+                }
+            } //end of winning function
 
-        
+            //losing function
+            const losingFunction = () => {
+                if (numOfGuesses > 7) {
+                    $('.button').prop('disabled', true);
+                }
+                
+            } //end of losing function
+
+            losingFunction()
+            winningFunction()
+
+
             }  //end of if statement
 
 
-        
+
         } //end of for loop
 
         
@@ -69,6 +80,7 @@ $(document).ready(function() {
 
 
 checkCorrectLetter()
+
 
 }); //end of jQuery function
 
