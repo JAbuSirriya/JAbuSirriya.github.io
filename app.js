@@ -21,12 +21,11 @@ $(document).ready(function() {
         $divAroundLetter.append($letter);
     }
 
- 
     //main game function
     //array of correct guesses
-    correctGuesses = []
+    let correctGuesses = []
     //player guess
-    const numOfGuesses = 0
+    let numOfGuesses = 0
     let checkCorrectLetter = () => {
     $('button').on('click', (event) => {
         let currentGuess = $(event.target).text().toLowerCase()
@@ -42,44 +41,50 @@ $(document).ready(function() {
             //sends correct letters to correctGuesses array
             correctGuesses.push($correctLetter)
 
-
             // SOURCE: https://github.com/simonjsuh/Vanilla-Javascript-Hangman-Game/blob/master/js/hangman.js
             // winning function, match the correct guess length with the random word 
-            const winningFunction = () => {
+            let winningFunction = () => {
                 if (correctGuesses.length == randomWord.length) {
                 console.log('You win!')
                 }
+                winningFunction()
             } //end of winning function
 
+        } //end of if statement
+
             //losing function
-            const losingFunction = () => {
-                if (numOfGuesses > 7) {
+            let losingFunction = () => {
+                if (numOfGuesses === 7 && correctGuesses.length != randomWord.length) {
                     $('.button').prop('disabled', true);
+                    console.log('You lose!')
                 }
                 
             } //end of losing function
-
             losingFunction()
-            winningFunction()
 
 
-            }  //end of if statement
+            //rest game function 
+            // const resetGame = () => {
+            //     numOfGuesses = []
+            //     checkCorrectLetter()
 
+            //     }
+
+            // resetGame()
 
 
         } //end of for loop
 
         
-        
-
-        
-    }) //end of button listener
+    } 
+    )
+     //end of button listener
 } //end of correct letter function
 
     
 
 
-checkCorrectLetter()
+    checkCorrectLetter()
 
 
 }); //end of jQuery function
