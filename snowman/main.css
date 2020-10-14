@@ -5,14 +5,13 @@ body {
 
 #picLetters {
   text-align: center;
-
-
 }
 
 #guessLetters {
   text-align: center;
   margin: auto;
   justify-content: center;
+  margin-bottom: 50px;
 
 }
 
@@ -21,6 +20,20 @@ body {
   margin: auto;
   display: flex;
   justify-content: center;
+  background-color: #3CB371;
+   border: none;
+  color: white;
+  padding: 10px 12px;
+  text-align: center;
+   text-decoration: none;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 3px solid white;
+  margin-top: 30px; 
+}
+
+#reset:focus {
+  outline: none;
 }
 
 .divAroundLetter {
@@ -43,6 +56,8 @@ body {
 #snowmanImage {
   max-width: 500px;
   max-height: 500px;
+  margin-top: px;
+  margin-bottom: 50px;
 }
 
 .button {
@@ -56,9 +71,18 @@ body {
   font-size: 16px;
   border-radius: 12px;
   border: 3px solid white;
+  margin: 5px;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .button:hover {
   background-color: indianred;
   color: black;
+}
+
+.button[disabled] {
+  background: grey;
 }
