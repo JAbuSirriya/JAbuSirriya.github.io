@@ -95,6 +95,7 @@ const startGame = () => {
         incorrectGuesses = []
         $('.button').prop('disabled', false);
         randomWord = generateWord()
+        $("#snowman").attr("src", "Images/0.png");
 
     }
 
