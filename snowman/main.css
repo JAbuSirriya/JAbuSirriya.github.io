@@ -1,4 +1,7 @@
 
+body {
+  background-color: lightseagreen;
+}
 
 .divAroundLetter {
   height: 50px;
@@ -19,5 +22,6 @@
 }
 
 #snowman {
-  
+  max-width: 500px;
+  max-height: 500px;
 }
