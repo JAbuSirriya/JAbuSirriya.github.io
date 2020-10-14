@@ -81,7 +81,7 @@ const startGame = () => {
         }
         if (foundLetter === false) {
             incorrectGuesses.push(currentGuess);
-            $("#gameImage").attr("src", "Images/" + incorrectGuesses.length + ".png");
+            $("#snowman").attr("src", "Images/" + incorrectGuesses.length + ".png");
         }
 
         winningFunction()
