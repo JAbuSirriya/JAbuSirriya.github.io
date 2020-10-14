@@ -46,7 +46,7 @@ const startGame = () => {
     for (i = 0; i<randWord.length; i++) {
         $divAroundLetter = $('<div>').addClass('DivAroundLetter').css('border-style', 'solid');
         $('#guessLetters').append($divAroundLetter);
-        $letter = $('<div>').addClass('letter').text(randomWordSplit[i]).css('color', 'lightcoral');
+        $letter = $('<div>').addClass('letter').text(randomWordSplit[i]).css('color', 'white');
         $divAroundLetter.append($letter);
     }
 
@@ -81,7 +81,7 @@ const startGame = () => {
         }
         if (foundLetter === false) {
             incorrectGuesses.push(currentGuess);
-            $("#snowman").attr("src", "Images/" + incorrectGuesses.length + ".png");
+            $("#snowmanImage").attr("src", "Images/" + incorrectGuesses.length + ".png");
         }
 
         winningFunction()
@@ -110,9 +110,27 @@ const startGame = () => {
 
 
 //###################################Adding CSS
+//event listener for game instructions button
+// Grabbing About the Game button
+const $openInstructionsBtn = $('#openGameInstructions');
+// Grabbing modal element
+const $instructionsModal = $('#instructionsModal');
+// Grabbing close button
+const $closeBtn = $('#close');
 
-
-
+//Event Handlers
+const openInstructions = () => {
+    $instructionsModal.css('display', 'block');
+  }
+  
+  const closeInstructions = () => {
+    $instructionsModal.css('display', 'none');
+  }
+  
+  //Event Listeners
+  $openInstructionsBtn.on('click', openInstructions);
+  
+  $closeBtn.on('click', closeInstructions);
 
 startGame()
 
