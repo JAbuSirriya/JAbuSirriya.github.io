@@ -1,18 +1,37 @@
 
 body {
-  background-color: lightseagreen;
+  background-color: #B22222;
+}
+
+#picLetters {
+  text-align: center;
+
+
+}
+
+#guessLetters {
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+
+}
+
+#reset {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .divAroundLetter {
   height: 50px;
   width: 50px;
-  
 }
 
 .letter {
     height: 50px;
     width: 50px;
-    background-color: lightblue;
+    background-color: lightcoral;
     font-size: 30px;
     text-align: center;
 }
@@ -21,7 +40,25 @@ body {
     display: flex;
 }
 
-#snowman {
+#snowmanImage {
   max-width: 500px;
   max-height: 500px;
+}
+
+.button {
+  background-color: #3CB371;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 3px solid white;
+}
+
+.button:hover {
+  background-color: indianred;
+  color: black;
 }

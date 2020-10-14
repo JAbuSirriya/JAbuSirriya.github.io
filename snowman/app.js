@@ -46,7 +46,7 @@ const startGame = () => {
     for (i = 0; i<randWord.length; i++) {
         $divAroundLetter = $('<div>').addClass('DivAroundLetter').css('border-style', 'solid');
         $('#guessLetters').append($divAroundLetter);
-        $letter = $('<div>').addClass('letter').text(randomWordSplit[i]).css('color', 'lightblue');
+        $letter = $('<div>').addClass('letter').text(randomWordSplit[i]).css('color', 'lightcoral');
         $divAroundLetter.append($letter);
     }
 
@@ -104,7 +104,14 @@ const startGame = () => {
     resetGame();
 
 
+
 } // end of main game function
+
+
+
+//###################################Adding CSS
+
+
 
 
 startGame()
