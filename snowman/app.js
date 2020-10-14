@@ -6,17 +6,9 @@ $(document).ready(function() {
     
 const startGame = () => {
 
-    // Format your code
-    // Start with all global variables
-    // Hook up my event handlers that don't rely on other functions
-    // Lower level (helper) functions
-    // Higher level functions
-    // Note: You have to hook up event handlers after the function is declared
-
 //################################################################### Winning function 
 // match the correct guess length with the random word 
     const winningFunction = () => {
-        console.log('winningFunction');
         if (correctGuesses.length == randomWord.length) {
         console.log('You win!')
         }
@@ -34,7 +26,7 @@ const startGame = () => {
 
 
     // Global Variables ##################################################
-    let listOfWords = ['elephant', 'headphones', 'dentist']
+    let listOfWords = ['elephant', 'headphones', 'dentist', 'egg', 'lamp']
 
 
     //select one random word from the list
@@ -88,14 +80,13 @@ const startGame = () => {
             } 
         }
         if (foundLetter === false) {
-            incorrectGuesses.push(currentGuess)
-            console.log(incorrectGuesses)
+            incorrectGuesses.push(currentGuess);
+            $("#gameImage").attr("src", "Images/" + incorrectGuesses.length + ".png");
         }
 
         winningFunction()
         losingFunction()
     })
-
 
     //######################################################### Reset Game function 
     const resetGame = () => {
