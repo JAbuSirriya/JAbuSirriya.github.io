@@ -86,10 +86,11 @@ $('#closeLoseButton').on('click', closeLoseModal);
     //array of correct guesses
     let correctGuesses = []
     let incorrectGuesses = []
-    let $numOfGuessesLeft = 7 - (incorrectGuesses.length);
 
-    // $guessesLeft = $('<div>').attr('guessesLeft').text($numOfGuessesLeft);
-    // $('#imageGuesses').append($guessesLeft);
+    console.log(incorrectGuesses)
+    let $numOfGuessesLeft = 7 - (incorrectGuesses.length);
+    const $guessesLeft = $('<div>').addClass('guessesLeft').text("Number of incorrect guesses left: " + $numOfGuessesLeft);
+    $('#imageGuesses').append($guessesLeft);
 
 
 //#################################################################### check correct letter handler 
@@ -112,8 +113,8 @@ $('#closeLoseButton').on('click', closeLoseModal);
             incorrectGuesses.push(currentGuess);
             $("#snowmanImage").attr("src", "Images/" + incorrectGuesses.length + ".png");
         }
-        console.log(incorrectGuesses.length)
-        console.log($numOfGuessesLeft)
+
+
         winningFunction()
         losingFunction()
     })
