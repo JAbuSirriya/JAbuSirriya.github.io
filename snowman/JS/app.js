@@ -57,7 +57,7 @@ $('#closeLoseButton').on('click', closeLoseModal);
 
 
     // Global Variables ##################################################
-    let listOfWords = ['elephant', 'headphones', 'dentist', 'egg', 'lamp']
+    let listOfWords = ['cookie', 'charity', 'caroling', 'blizzard', 'bells', 'gift', 'gingerbread', 'naughty', 'santa', 'scrooge', 'snowball', 'wreath', 'winter']
 
 
     //select one random word from the list
