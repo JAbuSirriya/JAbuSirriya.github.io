@@ -91,14 +91,13 @@ $('#closeLoseButton').on('click', closeLoseModal);
     
     //game score
     let score = 0;
-    let $currentScore = $('<div>').addClass('score').text("Correct number of words: " + score).css({'background-color': 'yellow', 'font-size': '20px', 'height': '50px', 'width': '200px', 'border-radius': '12px',
-    'border': '10px','border':'solid', 'border':'white'})
+    let $currentScore = $('<div>').addClass('score').text("Correct number of words: " + score).css({'background-color': '#F8B229', 'font-weight': 'bold', 'font-size': '20px', 'height': '50px', 'width': '200px', 'border': '4px solid black', 'border-radius': '12px'})
     $('#numOfGuesses').append($currentScore);
 
 
     //guesses left global functions
     let guessLeft = 7
-    let $guessesLeft = $('<div>').addClass('guessesLeft').text("Number of incorrect guesses left: " + guessLeft);
+    let $guessesLeft = $('<div>').addClass('guessesLeft').text("Number of incorrect guesses left: " + guessLeft).css({'background-color': '#F8B229', 'font-weight': 'bold', 'font-size': '20px', 'height': '50px', 'width': '200px', 'border': '4px solid black', 'border-radius': '12px'})
     $('#numOfGuesses').append($guessesLeft);
 
 //#################################################################### check correct letter handler 
