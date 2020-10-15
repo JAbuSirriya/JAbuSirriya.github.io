@@ -7,22 +7,48 @@ $(document).ready(function() {
 const startGame = () => {
 
 //################################################################### Winning function 
+//win modal pops open when player wins
+const openModal = () => {
+    $('#winModal').css('display', 'block');
+  }
+//close win button modal 
+const closeModal = () => {
+    $('#winModal').css('display', 'none');
+  }
+//event listener to close win modal
+$('#closeWinButton').on('click', closeModal);
+
 // match the correct guess length with the random word 
     const winningFunction = () => {
         if (correctGuesses.length == randomWord.length) {
         console.log('You win!')
+        setTimeout(openModal, 1000);
+
         }
 
     } //end of winning function
 
 
-    // ########################################################### losing function
-    const losingFunction = () => {
-        if (incorrectGuesses.length === 7) {
-            $('.button').prop('disabled', true);
-            console.log('You lose!')
-        } 
-    } //end of losing function
+    // ###########################################################losing function
+    //Lose modal pops open when player wins
+const openLoseModal = () => {
+    $('#loseModal').css('display', 'block');
+  }
+//close Lose button modal 
+const closeLoseModal = () => {
+    $('#loseModal').css('display', 'none');
+  }
+//event listener to close Lose modal
+$('#closeLoseButton').on('click', closeLoseModal);
+
+
+ const losingFunction = () => {
+    if (incorrectGuesses.length === 7) {
+        $('.button').prop('disabled', true);
+        console.log('You lose!')
+        setTimeout(openLoseModal, 1000);
+    } 
+} //end of losing function
 
 
     // Global Variables ##################################################
@@ -60,7 +86,10 @@ const startGame = () => {
     //array of correct guesses
     let correctGuesses = []
     let incorrectGuesses = []
-    
+    let $numOfGuessesLeft = 7 - (incorrectGuesses.length);
+
+    // $guessesLeft = $('<div>').attr('guessesLeft').text($numOfGuessesLeft);
+    // $('#imageGuesses').append($guessesLeft);
 
 
 //#################################################################### check correct letter handler 
@@ -83,7 +112,8 @@ const startGame = () => {
             incorrectGuesses.push(currentGuess);
             $("#snowmanImage").attr("src", "Images/" + incorrectGuesses.length + ".png");
         }
-
+        console.log(incorrectGuesses.length)
+        console.log($numOfGuessesLeft)
         winningFunction()
         losingFunction()
     })

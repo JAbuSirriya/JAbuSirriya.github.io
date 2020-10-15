@@ -10,7 +10,6 @@
 <body>
     <container id="picLetters">
         <h1 id="snowmanTitle">Snowman</h1>
-        <button class="modal-buttons" id="openGameInstructions">Game Instructions</button>
         <div id=instructionsModal>
             <div id="modal-textbox">
                 <h1>How to play Snowman?</h1>
@@ -26,7 +25,8 @@
                     </div>   
             </div>
         </div>
-        <div>
+        <button class="modal-buttons" id="openGameInstructions">Game Instructions</button>
+        <div id='imageGuesses'>
             <img id='snowmanImage' src="Images/0.png">
         </div>
         <div id="guessLetters"></div>
@@ -63,6 +63,18 @@
             <button class="button">Z</button>
         </div>
         <button id="reset">Reset Game</button>
+        <div id="winModal">
+            <div id="winModalTextbox">
+              <a id="closeWinButton" href="#">Close</a>
+              <h1>You won! You solved the word before your snowman melted!</h1>
+            </div>
+        </div>
+        <div id="loseModal">
+            <div id="loseModalTextbox">
+              <a id="closeLoseButton" href="#">Close</a>
+              <h1>Your snowman melted! Try again!</h1>
+            </div>
+        </div>
     </container>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
 <script src="app.js" charset="utf-8"></script>
