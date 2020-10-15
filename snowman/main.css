@@ -6,11 +6,11 @@ body {
 #snowmanTitle {
   font-size: 60px;
   color: white;
+  font-family: Mountains of Christmas;
 }
 
 #picLetters {
   text-align: center;
-  font-family: Mountains of Christmas;
 }
 
 #guessLetters {
@@ -18,6 +18,7 @@ body {
   margin: auto;
   justify-content: center;
   margin-bottom: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
 
@@ -118,8 +119,31 @@ body {
   /*This will give the box some depth.*/
   padding: 2%;
   line-height: 120%;
+  font-family: Georgia, 'Times New Roman', Times, serif, 'Times New Roman', Times, serif, Helvetica, sans-serif;
 }
 
 #modal-footer {
-	text-align: right;
+  text-align: center;
+  
+}
+
+p {
+  padding-top: 20px;
+}
+
+.modal-buttons {
+  padding: 14px 18px;
+	background-color: #677996;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Georgia';
+  cursor: pointer;
+  font-size: 15px;
+}
+
+
+#openGameInstructions {
+    
 }
