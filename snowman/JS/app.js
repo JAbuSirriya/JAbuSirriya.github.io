@@ -1,6 +1,10 @@
 
 
+const christmasMusic = new Audio('Audio/christmasMusic.mp3')
+
+
 $(document).ready(function() {
+
 
 //################################################################## Start Game Function  
     
@@ -173,6 +177,7 @@ const openInstructions = () => {
   
   const closeInstructions = () => {
     $instructionsModal.css('display', 'none');
+    christmasMusic.play()
   }
   
   //Event Listeners
