@@ -24,7 +24,7 @@ $('#closeWinButton').on('click', closeModal);
         console.log('You win!')
         setTimeout(openModal, 1000);
         score++
-        $currentScore.text("Correct number of words: " + score);
+        $currentScore.text("Correct number of words: " + score)
         }
 
     } //end of winning function
@@ -91,7 +91,8 @@ $('#closeLoseButton').on('click', closeLoseModal);
     
     //game score
     let score = 0;
-    let $currentScore = $('<div>').addClass('score').text("Correct number of words: " + score);
+    let $currentScore = $('<div>').addClass('score').text("Correct number of words: " + score).css({'background-color': 'yellow', 'font-size': '20px', 'height': '50px', 'width': '200px', 'border-radius': '12px',
+    'border': '10px','border':'solid', 'border':'white'})
     $('#numOfGuesses').append($currentScore);
 
 
