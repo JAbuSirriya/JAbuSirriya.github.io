@@ -23,6 +23,8 @@ $('#closeWinButton').on('click', closeModal);
         if (correctGuesses.length == randomWord.length) {
         console.log('You win!')
         setTimeout(openModal, 1000);
+        score++
+        $currentScore.text("Correct number of words: " + score);
 
         }
 
@@ -86,12 +88,18 @@ $('#closeLoseButton').on('click', closeLoseModal);
     //array of correct guesses
     let correctGuesses = []
     let incorrectGuesses = []
+    
+    
+    //game score
+    let score = 0;
+    let $currentScore = $('<div>').addClass('score').text("Correct number of words: " + score);
+    $('#numOfGuesses').append($currentScore);
 
-    console.log(incorrectGuesses)
-    let $numOfGuessesLeft = 7 - (incorrectGuesses.length);
-    const $guessesLeft = $('<div>').addClass('guessesLeft').text("Number of incorrect guesses left: " + $numOfGuessesLeft);
-    $('#imageGuesses').append($guessesLeft);
 
+    //guesses left global functions
+    let guessLeft = 7
+    let $guessesLeft = $('<div>').addClass('guessesLeft').text("Number of incorrect guesses left: " + guessLeft);
+    $('#numOfGuesses').append($guessesLeft);
 
 //#################################################################### check correct letter handler 
     $('.button').on('click', (event) => {
@@ -112,8 +120,16 @@ $('#closeLoseButton').on('click', closeLoseModal);
         if (foundLetter === false) {
             incorrectGuesses.push(currentGuess);
             $("#snowmanImage").attr("src", "Images/" + incorrectGuesses.length + ".png");
+            guessLeft--
+            $($guessesLeft.text("Number of incorrect guesses left: " + guessLeft));
         }
+        
 
+        // $numOfGuessesLeft = 7 - (incorrectGuesses.length);
+        // guessLeft = $numOfGuessesLeft
+        
+        
+    
 
         winningFunction()
         losingFunction()
@@ -127,6 +143,8 @@ $('#closeLoseButton').on('click', closeLoseModal);
         $('.button').prop('disabled', false);
         randomWord = generateWord()
         $("#snowmanImage").attr("src", "Images/0.png");
+        guessLeft = 7;
+        $($guessesLeft.text("Number of incorrect guesses left: " + guessLeft));
 
     }
 
