@@ -69,7 +69,6 @@ $('#closeLoseButton').on('click', closeLoseModal);
     //###################################### Generate Word Function
  const generateWord = () => {
     let randWord = listOfWords[Math.floor(Math.random()*listOfWords.length)];
-    console.log(randWord);
     let randomWordSplit = randWord.split("");
 
     //creates a div surrounding the letter and a letter div
