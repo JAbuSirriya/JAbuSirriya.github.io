@@ -12,22 +12,21 @@
         <h1 id="snowmanTitle">Snowman</h1>
         <div id=instructionsModal>
             <div id="modal-textbox">
-                <h1>How to play Snowman?</h1>
-                    <p>We'll make some big ol' huge mountains! There's too many complicated things in our life already. All you're worried about is this nice outside shape. Always follow the angles. Don't just cover it all up -- leave these spots!
-                    <br> 
-                    <br>        
-                    Everybody should have a friend. Just sorta make these things up in your mind, and let them drop in. Help them make a happy buck or two. Sort of an orangy-yellowish color. Water breaks, and it churns, and it has fun!
-                    <br>
-                    <br>
-                    Today's such a wonderful day, let's just make a happy little painting. Maybe I'll have a bit mountain today. You can do anything that you believe you can do. Get it to where you want it, and leave it alone. That's the fun part of this whole technique.</p> 
+                <!-- SOURCE: https://www.hangmanwords.com/how-to  -->
+                <h1>Instructions for playing Snowman</h1>
+                    <p>Snowman is a simple word guessing game. Players try to figure out an unknown word by guessing letters. If seven letters which do not appear in the word are guessed, the snowman falls apart (and loses). Try and keep your snowman alive by guessing the correct letters. Good luck!</p>
                     <div id="modal-footer">
                  <button class="modal-buttons" id="close" href="#">Close</button>
                     </div>   
             </div>
         </div>
-        <button class="modal-buttons" id="openGameInstructions">Game Instructions</button>
-        <div id='imageGuesses'>
+        <div id='scoreGuess'>
             <div id="numOfGuesses"></div>
+        <div id='instructions'>
+            <button class="modal-buttons" id="openGameInstructions">Game Instructions</button>
+        </div>
+        </div>
+        <div id='imageGuesses'>
             <img id='snowmanImage' src="Images/0.png">
         </div>
         <div id="guessLetters"></div>

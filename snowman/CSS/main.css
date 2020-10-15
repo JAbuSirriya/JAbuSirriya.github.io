@@ -27,11 +27,11 @@ body {
   display: flex;
   justify-content: center;
   background-color: #3CB371;
-   border: none;
+  border: none;
   color: white;
   padding: 10px 12px;
   text-align: center;
-   text-decoration: none;
+  text-decoration: none;
   font-size: 16px;
   border-radius: 12px;
   border: 3px solid white;
@@ -108,16 +108,16 @@ body {
 }
 
 #modal-textbox {
-	background-color: white;
-	height: 350px;
-	width: 550px;
+	background-color: lightblue;
+	height: 300px;
+	width: 480px;
   border-radius: 2px;
   margin: 150px auto;
 	/*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   /*This will give the box some depth.*/
   padding: 2%;
-  line-height: 120%;
+  line-height: 160%;
   font-family: Georgia, 'Times New Roman', Times, serif, 'Times New Roman', Times, serif, Helvetica, sans-serif;
 }
 
@@ -140,19 +140,20 @@ p {
 	font-family: 'Georgia';
   cursor: pointer;
   font-size: 15px;
+  text-decoration: none;
 }
 
 
-#openGameInstructions {
-  position: absolute;
-  right: 8%;
-  top: 40%;
-  height: 50px;
-  border: 3px solid white;
+#scoreGuess {
+  margin: auto;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-right: 60px;
 }
 
-#numOfGuesses {
-  
+#instructions {
+margin-left: 60px;
 }
 
 
@@ -177,10 +178,13 @@ p {
   border-radius: 2px;
   margin: 150px auto;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 2%;
+  line-height: 370%;
+  font-family: Georgia, 'Times New Roman', Times, serif, 'Times New Roman', Times, serif, Helvetica, sans-serif;
 }
 
 #button-container {
   justify-content: center;
-  width: 48%;
+  width: 60%;
   margin: auto;
 }
