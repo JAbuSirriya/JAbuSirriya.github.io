@@ -25,7 +25,6 @@ $('#closeWinButton').on('click', closeModal);
         setTimeout(openModal, 1000);
         score++
         $currentScore.text("Correct number of words: " + score);
-
         }
 
     } //end of winning function
