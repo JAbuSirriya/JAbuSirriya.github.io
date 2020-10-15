@@ -17,9 +17,8 @@ body {
   text-align: center;
   margin: auto;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-
 }
 
 #reset {
@@ -36,7 +35,7 @@ body {
   font-size: 16px;
   border-radius: 12px;
   border: 3px solid white;
-  margin-top: 30px; 
+  margin-top: 20px; 
 }
 
 #reset:focus {
@@ -63,15 +62,15 @@ body {
 #snowmanImage {
   max-width: 500px;
   max-height: 500px;
-  margin-top: px;
-  margin-bottom: 50px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .button {
   background-color: #3CB371;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -132,7 +131,7 @@ p {
 }
 
 .modal-buttons {
-  padding: 14px 18px;
+  padding: 8px 15px;
 	background-color: #677996;
 	border: none;
 	outline: none;
@@ -140,13 +139,20 @@ p {
 	color: white;
 	font-family: 'Georgia';
   cursor: pointer;
-  font-size: 20px;
+  font-size: 15px;
 }
+
 
 #openGameInstructions {
   position: absolute;
-  left: 475px;
-  top: 350px;
+  right: 8%;
+  top: 40%;
+  height: 50px;
+  border: 3px solid white;
+}
+
+#numOfGuesses {
+  
 }
 
 
@@ -165,10 +171,16 @@ p {
 }
 
 #winModalTextbox, #loseModalTextbox {
-	background-color: lightgrey;
-	height: 350px;
-	width: 550px;
+	background-color: lightgreen;
+	height: 300px;
+	width: 350px;
   border-radius: 2px;
   margin: 150px auto;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#button-container {
+  justify-content: center;
+  width: 48%;
+  margin: auto;
 }
