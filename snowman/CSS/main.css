@@ -64,7 +64,7 @@ body {
   max-height: 500px;
   margin-top: 15px;
   margin-bottom: 20px;
-  
+
 }
 
 .button {
@@ -190,4 +190,50 @@ margin-left: 60px;
   margin: auto;
 }
 
+@media only screen and (max-width: 600px) {
+  .divAroundLetter {
+    height: 25px;
+    width: 25px;
+  }
+  
+  .letter {
+      height: 25px;
+      width: 25px;
+      background-color: white;
+      font-size: 20px;
+      text-align: center;
+  }
 
+  #snowmanImage {
+    max-width: 275px;
+    max-height: 275px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.button {
+  background-color: #3CB371;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: flexbox;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 3px solid white;
+  margin: 5px;
+}
+
+#instructions {
+  margin-left: 10px;
+  }
+
+#scoreGuess {
+  margin: auto;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-right: 10px;
+}
+}
