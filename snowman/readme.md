@@ -17,6 +17,8 @@ In the HTML In the JavaScript file, I first created all of the global variables 
 
 ## If more time permitted 
 
+blah blah blah
+
 
 
 
