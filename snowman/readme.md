@@ -21,4 +21,10 @@ Then I created the main functions of the game such as the
 
 
 
+## If more time permitted 
+
+
+
+
+
 
