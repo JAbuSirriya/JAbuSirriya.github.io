@@ -119,6 +119,8 @@ $('#closeLoseButton').on('click', closeLoseModal);
                 correctGuesses.push($correctLetter)
             } 
         }
+        //SOURCE: Julie Dyer previous work geared me towards setting up my images with a numeric name (ie Image/0.png). The made for an excellent transition for each incorrect guess and corresponding image.  https://github.com/juliemdyer/Hangman/blob/master/app.js
+        
         if (foundLetter === false) {
             incorrectGuesses.push(currentGuess);
             $("#snowmanImage").attr("src", "Images/" + incorrectGuesses.length + ".png");

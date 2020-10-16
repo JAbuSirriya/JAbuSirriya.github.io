@@ -94,6 +94,7 @@ body {
   background: grey;
 }
 
+/* SOURCE: I General Assembly class notes to help in contructing each of the modals that I created */
 #instructionsModal {
 	background-color: rgba(0,0,0,0.4);
 	position: fixed;
