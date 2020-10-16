@@ -3,6 +3,13 @@ body {
   background-color: #B22222;
 }
 
+#imageGuesses {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 #snowmanTitle {
   font-size: 60px;
   color: white;
@@ -15,9 +22,7 @@ body {
 
 #guessLetters {
   text-align: center;
-  margin: auto;
   justify-content: center;
-  margin-bottom: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -147,15 +152,13 @@ p {
 
 
 #scoreGuess {
-  margin: auto;
   display: flex;
-  margin: auto;
   justify-content: center;
-  margin-right: 60px;
+  width: 33%;
 }
 
 #instructions {
-margin-left: 60px;
+width: 33%;
 }
 
 
@@ -192,9 +195,15 @@ margin-left: 60px;
 }
 
 @media only screen and (max-width: 600px) {
+
   .divAroundLetter {
     height: 25px;
     width: 25px;
+  }
+
+  #imageGuesses {
+    flex-direction: column;
+    margin-bottom: 1rem;
   }
   
   .letter {
@@ -218,28 +227,26 @@ margin-left: 60px;
   margin: 5px;
 }
 
-#instructions {
-  margin-left: 10px;
+  #instructions {
+    width: 100%;
+    }
+
+  #scoreGuess {
+    display: flex;
+    justify-content: center;
+    width: 33%;
   }
 
-#scoreGuess {
-  margin: auto;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  margin-right: 10px;
-}
+  #winModalTextbox, #loseModalTextbox {
+    height: auto;
+    width: 250px;
+    line-height: 250%;
+  }
 
-#winModalTextbox, #loseModalTextbox {
-	height: 250px;
-	width: 250px;
-  line-height: 250%;
-}
-
-#modal-textbox {
-  height: 370px;
-	width: 350px;
-  line-height: 180%;
+  #modal-textbox {
+    height: auto;
+    width: 350px;
+    line-height: 180%;
 }
 
 }
