@@ -25,4 +25,4 @@ Firstly, I would add categories or levels to the game. With each level, the comp
 ## In conclusion
 I learned so much from creating this project. I realized my strengths and the areas I need to improve. I hope you enjoy Snowman as much as I did making it. 
 
-
+Link to Snowman Game: https://jabusirriya.github.io/snowman/
